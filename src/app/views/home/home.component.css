@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+.banner {
+  background-image: url("../../../assets/img/Banner site.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  height: 100vh;
+  width: 100%;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+}
+
+.arrow-button {
+  width: 8px;
+  height: 100%;
+  font-size: 1.5rem;
+
+  padding: 0 1rem;
+
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.most-wanted {
+  display: flex;
+  position: relative;
+
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 20px;
+
+  background-color: #c0c0c0;
+}
+
+.product-card {
+  height: 50vh;
+  min-width: clamp(180px, 20vw, 220px);
+  width: clamp(180px, 20vw, 220px);
+
+  background-color: #fff;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  padding: 16px;
+  margin: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:last-of-type {
+  margin-right: 0;
+}
+
+.product-card:first-of-type {
+  margin-left: 0;
+}
+
+h2 {
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.product-row {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  overflow-x: hidden;
+}
+
+.product-card {
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-price {
+  text-align: center;
+}
+
+.product-parcel {
+  text-align: justify;
+}
+
+footer {
+  height: 25vh;
+  width: 100%;
+
+  background-color: black;
+
+  padding: 0 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #fff;
+}
+
+footer > * {
+  flex: 1;
+}
+
+footer .about {
+  flex: 2;
+  text-align: justify;
+}
+
+footer .about h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+footer img {
+  width: auto;
+  height: 50%;
+  object-fit: contain;
+}
+
+footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social ul {
+  list-style: none;
+
+  font-size: 1.1rem;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding: 0;
+
+  gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 24px 16px 32px;
+    gap: 24px;
+    height: auto;
+  }
+
+  footer .social ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-size: 1.2rem;
+    justify-content: center;
+
+    gap: 24px;
+  }
+
+  .most-wanted {
+    padding: 16px 12px;
+  }
+
+  #row {
+    justify-content: center;
+  }
+}
+
+.button-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  height: 100%;
+}
+
+.login-button {
+  width: 10%;
+  height: auto;
+
+  color: black;
+  background-color: whitesmoke;
+
+  padding: 12px 16px;
+
+  border: 1px solid black;
+  border-radius: 8px;
+
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.cart-button {
+  height: 100%;
+
+  font-size: 1.25rem;
+
+  color: black;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.menu-text {
+  position: relative;
+}
+
+.menu-text a {
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu-text a::after {
+  content: "";
+  position: absolute;
+
+  height: 2px;
+  width: 0;
+  background-color: black;
+
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: all 250ms ease-in-out;
+}
+
+.menu-text a:hover::after {
+  width: 100%;
+}
+
+.searchbar {
+  width: auto;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.searchbar input {
+  width: 100%;
+  height: 100%;
+
+  padding: 12px 16px;
+
+  border: 1px solid black;
+  border-width: 0 0 1px 0;
+
+  font-size: 1.1rem;
+}
+
+.searchbar button {
+  font-size: 1.2rem;
+
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .searchbar {
+    display: none;
+  }
+
+  .button-holder {
+    gap: 16px;
+  }
+
+  .login-button {
+    width: 20%;
+  }
+}
